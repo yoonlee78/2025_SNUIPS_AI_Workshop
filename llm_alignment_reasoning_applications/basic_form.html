@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview Feedback Form</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        form { max-width: 600px; margin: auto; }
+        input, textarea { width: 100%; margin: 5px 0; padding: 8px; }
+        button { padding: 10px; background: blue; color: white; border: none; cursor: pointer; }
+        button:hover { background: darkblue; }
+    </style>
+</head>
+<body>
+
+    <h2>Interview Feedback Form</h2>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const rubric = [
+            { dimension: 'Technical Skills', weight: 0.4, maxScore: 5 },
+            { dimension: 'Communication', weight: 0.3, maxScore: 5 },
+            { dimension: 'Team Collaboration', weight: 0.2, maxScore: 5 },
+            { dimension: 'Problem Solving', weight: 0.1, maxScore: 5 },
+        ];
+
+        function FeedbackForm() {
+            const [ratings, setRatings] = React.useState(
+                rubric.reduce((acc, cur) => ({ ...acc, [cur.dimension]: { score: '', evidence: '' } }), {})
+            );
+            const [finalRecommendation, setFinalRecommendation] = React.useState(null);
+
+            const handleRatingChange = (dimension, field, value) => {
+                setRatings(prev => ({
+                    ...prev,
+                    [dimension]: { ...prev[dimension], [field]: value },
+                }));
+            };
+
+            const calculateRecommendation = () => {
+                let totalScore = 0;
+                let totalWeight = 0;
+
+                Object.keys(ratings).forEach(dimension => {
+                    const score = parseFloat(ratings[dimension].score);
+                    const weight = rubric.find(item => item.dimension === dimension).weight;
+                    if (!isNaN(score) && score <= rubric.find(item => item.dimension === dimension).maxScore) {
+                        totalScore += score * weight;
+                        totalWeight += weight;
+                    }
+                });
+
+                setFinalRecommendation(totalWeight ? (totalScore / totalWeight).toFixed(2) : 0);
+            };
+
+            const validateForm = () => {
+                return Object.values(ratings).every(({ score, evidence }) => score && evidence);
+            };
+
+            const handleSubmit = (e) => {
+                e.preventDefault();
+                if (validateForm()) {
+                    calculateRecommendation();
+                } else {
+                    alert("Please fill all fields with valid data before submitting.");
+                }
+            };
+
+            return (
+                <form onSubmit={handleSubmit}>
+                    {rubric.map(({ dimension, weight }) => (
+                        <div key={dimension}>
+                            <h3>{dimension} (Weight: {weight})</h3>
+                            <label>
+                                Rating (0-{rubric.find(item => item.dimension === dimension).maxScore}):
+                                <input
+                                    type="number"
+                                    min="0"
+                                    max={rubric.find(item => item.dimension === dimension).maxScore}
+                                    value={ratings[dimension].score}
+                                    onChange={(e) => handleRatingChange(dimension, 'score', e.target.value)}
+                                    required
+                                />
+                            </label>
+                            <br />
+                            <label>
+                                Evidence/Examples:
+                                <textarea
+                                    value={ratings[dimension].evidence}
+                                    onChange={(e) => handleRatingChange(dimension, 'evidence', e.target.value)}
+                                    placeholder="Provide specific examples or evidence..."
+                                    required
+                                />
+                            </label>
+                            <hr />
+                        </div>
+                    ))}
+                    <button type="submit">Submit Feedback</button>
+                    {finalRecommendation && <h2>Final Recommendation Score: {finalRecommendation}</h2>}
+                </form>
+            );
+        }
+
+        ReactDOM.render(<FeedbackForm />, document.getElementById("root"));
+    </script>
+
+</body>
+</html>

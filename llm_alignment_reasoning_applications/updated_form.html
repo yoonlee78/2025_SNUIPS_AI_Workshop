@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview Feedback Form</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; background-color: #f9f9f9; }
+        .container { max-width: 600px; margin: auto; padding: 20px; border: 1px solid #ddd; border-radius: 8px; background: white; }
+        .form-section { margin-bottom: 20px; padding: 15px; border: 1px solid #eee; border-radius: 5px; background-color: #fff; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; }
+        select, textarea { width: 100%; padding: 8px; margin-bottom: 10px; border-radius: 4px; border: 1px solid #ccc; }
+        .error { color: red; font-size: 0.8em; margin-top: -8px; margin-bottom: 8px; display: block; }
+        .submit-btn { padding: 10px; background: green; color: white; border: none; cursor: pointer; border-radius: 4px; }
+        .submit-btn:hover { background: darkgreen; }
+    </style>
+</head>
+<body>
+
+    <div id="root"></div>
+
+    <script type="text/babel">
+        function FeedbackForm() {
+            const rubric = [
+                { id: 1, dimension: 'Communication', weight: 0.3, description: 'Ability to convey information clearly and effectively.' },
+                { id: 2, dimension: 'Technical Skills', weight: 0.4, description: 'Proficiency in relevant technical areas.' },
+                { id: 3, dimension: 'Problem Solving', weight: 0.3, description: 'Ability to identify and solve complex problems.' },
+            ];
+
+            const [ratings, setRatings] = React.useState({});
+            const [evidences, setEvidences] = React.useState({});
+            const [errors, setErrors] = React.useState({});
+            const [finalRecommendation, setFinalRecommendation] = React.useState('');
+
+            React.useEffect(() => {
+                calculateRecommendation();
+            }, [ratings]);
+
+            const handleRatingChange = (id, value) => {
+                setRatings({ ...ratings, [id]: parseFloat(value) });
+            };
+
+            const handleEvidenceChange = (id, value) => {
+                setEvidences({ ...evidences, [id]: value });
+            };
+
+            const validate = () => {
+                let tempErrors = {};
+                rubric.forEach(item => {
+                    if (!ratings[item.id]) tempErrors[item.id] = 'Please provide a rating.';
+                    if (!evidences[item.id] || evidences[item.id].trim() === '') {
+                        tempErrors[`evidence_${item.id}`] = 'Please provide evidence/examples.';
+                    }
+                });
+                setErrors(tempErrors);
+                return Object.keys(tempErrors).length === 0;
+            };
+
+            const calculateRecommendation = () => {
+                let totalScore = 0;
+                rubric.forEach(item => {
+                    const rating = ratings[item.id] || 0;
+                    totalScore += rating * item.weight;
+                });
+                if (totalScore >= 4.5) setFinalRecommendation('Strongly Recommend');
+                else if (totalScore >= 3.5) setFinalRecommendation('Recommend');
+                else if (totalScore >= 2.5) setFinalRecommendation('Neutral');
+                else setFinalRecommendation('Do Not Recommend');
+            };
+
+            const handleSubmit = (e) => {
+                e.preventDefault();
+                if (validate()) {
+                    alert(`Recommendation: ${finalRecommendation}`);
+                } else {
+                    alert('Please fix the errors in the form.');
+                }
+            };
+
+            return (
+                <div className="container">
+                    <h2>Interview Feedback Form</h2>
+                    <form onSubmit={handleSubmit}>
+                        {rubric.map(item => (
+                            <div key={item.id} className="form-section">
+                                <h3>{item.dimension}</h3>
+                                <p>{item.description}</p>
+                                <label>
+                                    Rating (1-5):
+                                    <select value={ratings[item.id] || ''} onChange={(e) => handleRatingChange(item.id, e.target.value)}>
+                                        <option value="">Select</option>
+                                        {[1,2,3,4,5].map(num => (
+                                            <option key={num} value={num}>{num}</option>
+                                        ))}
+                                    </select>
+                                </label>
+                                {errors[item.id] && <span className="error">{errors[item.id]}</span>}
+                                <label>
+                                    Evidence/Examples:
+                                    <textarea
+                                        value={evidences[item.id] || ''}
+                                        onChange={(e) => handleEvidenceChange(item.id, e.target.value)}
+                                        placeholder={`Provide specific examples related to ${item.dimension.toLowerCase()}...`}
+                                    />
+                                </label>
+                                {errors[`evidence_${item.id}`] && <span className="error">{errors[`evidence_${item.id}`]}</span>}
+                            </div>
+                        ))}
+                        <div><strong>Final Recommendation:</strong> {finalRecommendation}</div>
+                        <button type="submit" className="submit-btn">Submit Feedback</button>
+                    </form>
+                </div>
+            );
+        }
+
+        ReactDOM.render(<FeedbackForm />, document.getElementById("root"));
+    </script>
+
+</body>
+</html>
