@@ -17,48 +17,53 @@ The Institute of Psychological Science hopes this workshop will equip participan
 🎯 **Target Audience**: SNU Psychology graduate students  
 💻 **Required Materials**: Personal laptop and necessary accounts for each session 
 
-### Workshop Schedule
+## Workshop Schedule
 
-#### Day 1
-- **Morning: Large Language Models (LLMs) - Alignment, Reasoning, and Applications**  
-  📂 Folder: `llm_alignment_reasoning_applications`  
-  📄 [Presentation Link](https://www.canva.com/design/DAGd7n4z58o/pWRdUrwyN_LaxjsilH-5Qw/view?utm_content=DAGd7n4z58o&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hecefdd2b91)\
-  📜 [Hands-on Colab Notebook: Basic Prompting: GPT-3.5 and GPT-4](https://colab.research.google.com/drive/19DpQcOn0ci7mPovOLPlY2H7aPWHfLTWN?usp=sharing)\
-  📜 [Hands-on Colab Notebook: Advanced Prompting: Reasoning with GPT-omni](https://colab.research.google.com/drive/1Ig9qUhM7YHqGLdseYFQIqpONOMKaYSH-?usp=sharing)
-  📄 Refererence/Source: 
-  - [Deeplearning.AI: Generative AI with LLMs](https://www.deeplearning.ai/courses/generative-ai-with-llms/)
-  - [Deeplearning.AI: Reasoning with O1](https://www.deeplearning.ai/short-courses/reasoning-with-o1/)
+### Day 1
+
+#### 1. Large Language Models (LLMs) - Alignment, Reasoning, and Applications  
+- **Presenter**: [Yoon Kyung Lee](yoonkyunglee.com), Ph.D. (Senior Researcher, Institute of Psychological Science, SNU)  
+- 📁 **Folder**: `llm_alignment_reasoning_applications`  
+- 📊 **Presentation Slides**: [Link](https://www.canva.com/design/DAGd7n4z58o/pWRdUrwyN_LaxjsilH-5Qw/view?utm_content=DAGd7n4z58o&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hecefdd2b91)  
+- 📖 **Hands-on Colab Notebooks**:  
+  - [Basic Prompting: GPT-3.5 and GPT-4](https://colab.research.google.com/drive/19DpQcOn0ci7mPovOLPlY2H7aPWHfLTWN?usp=sharing)  
+  - [Advanced Prompting: Reasoning with GPT-omni](https://colab.research.google.com/drive/1Ig9qUhM7YHqGLdseYFQIqpONOMKaYSH-?usp=sharing)  
+- 📚 **References/Sources**:  
+  - [Deeplearning.AI: Generative AI with LLMs](https://www.deeplearning.ai/courses/generative-ai-with-llms/)  
+  - [Deeplearning.AI: Reasoning with O1](https://www.deeplearning.ai/short-courses/reasoning-with-o1/)  
   - [OpenAI API](https://openai.com/index/openai-api/)
 
-- **Afternoon: Semantic Analysis**  
-  📂 Folder: `semantic_analysis`  
-  📄 [Presentation Link](https://www.canva.com/design/DAGdwv_GbUI/0f6Ks3GlEpYF93y2aUs6og/edit?utm_content=DAGdwv_GbUI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)\
-  📜 [Hands-on Colab Notebook: Word2Vec and Topic-Modeling](https://colab.research.google.com/drive/1w8HlNr7zrFBj0o2jm_gcpHJuFdD0AM8b?usp=sharing)\
-  📂 Dataset Link: [OPELA dataset](https://github.com/yoonlee78/OPELA)
-  📄 Reference/Source: 
-  - [Eichstaedt et al (2021)](https://psycnet.apa.org/record/2021-99502-001), 
-  - [LIWC-22](https://www.liwc.app), 
-  - [Speech and Language Processing](https://web.stanford.edu/~jurafsky/slp3/)\, 
-  - [바른](https://bareun.ai) 
+#### 2. Semantic Analysis  
+- **Presenter**: [Serin Oh](https://hfpsych.snu.ac.kr/Portfolio/portfolio_SerinOh.html), Master's student at Human Factors Psychology Lab, Dept. of Psychology, SNU  
+- 📁 **Folder**: `semantic_analysis`  
+- 📊 **Presentation Slides**: [Link](https://www.canva.com/design/DAGdwv_GbUI/0f6Ks3GlEpYF93y2aUs6og/edit?utm_content=DAGdwv_GbUI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)  
+- 📖 **Hands-on Colab Notebook**: [Word2Vec and Topic-Modeling](https://colab.research.google.com/drive/1w8HlNr7zrFBj0o2jm_gcpHJuFdD0AM8b?usp=sharing)  
+- 📁 **Dataset**: [OPELA dataset](https://github.com/yoonlee78/OPELA)  
+- 📚 **References/Sources**:  
+  - [Eichstaedt et al (2021)](https://psycnet.apa.org/record/2021-99502-001)  
+  - [LIWC-22](https://www.liwc.app)  
+  - [Speech and Language Processing](https://web.stanford.edu/~jurafsky/slp3/)  
+  - [바른](https://bareun.ai)
 
-#### Day 2
-- **Morning: Data Science - Feature Extraction**  
-  📂 Folder: `feature_extraction`  
-  📄 [Presentation Link](https://drive.google.com/file/d/10taeTiH1I0w1nNaVjjc9gydwA4XhWdP4/view)
-  📄 Reference/Source: 
+### Day 2
+
+#### 3. Data Science - Feature Extraction  
+- **Presenter**: [Inju Lee](https://hfpsych.snu.ac.kr/Portfolio/portfolio_InjuLee.html), Ph.D. student at Human Factors Psychology Lab, Dept. of Psychology, SNU  
+- 📁 **Folder**: `feature_extraction`  
+- 📊 **Presentation Slides**: [Link](https://drive.google.com/file/d/10taeTiH1I0w1nNaVjjc9gydwA4XhWdP4/view)  
+- 📚 **References/Sources**:  
   - [Introduction to Statistical Learning with Applications in Python](www.statlearning.com)
 
-- **Afternoon: Mobile App Prototyping with Figma and Midjourney**  
-    
-  📄 [Part 1 Figma: Presentation Slides](https://www.figma.com/deck/ujYJVDnhoYcNNpOp0puFr2/Untitled?node-id=1-122&t=4YRroLrw8bQq4cOk-1)
-  📄 [Part 2 Midjourney: Presentation Slides](https://www.figma.com/deck/J2bos4X8G71cnJPdf3oH62/250207-Midjourney-Workshop?node-id=1-313&t=0ysHuhUBksHEH6cz-1)
-  [Tutorial Slides](https://astonishing-cent-454.notion.site/250207-Midjourney-Workshop-1889e29f24f080a58930cbd652dd8fbf?pvs=4)\
-  📄 Reference/Source: 
-  - [Figma](https://www.figma.com/)
-  - [Figma Learn](https://www.figma.com/deck/ujYJVDnhoYcNNpOp0puFr2/Untitled?node-id=1-122&t=4YRroLrw8bQq4cOk-1)
-  - [Midjourney](https://www.midjourney.com/)
+#### 4. Mobile App Prototyping with Figma and Midjourney  
+- **Presenters**: [Hyunjoo Lee](https://hfpsych.snu.ac.kr/Portfolio/portfolio_HyunjooLee.html), [Joohye Lee](https://hfpsych.snu.ac.kr/Portfolio/portfolio_JoohyeLee.html), Master's students at Human Factors Psychology Lab, Dept. of Psychology, SNU  
+- 📊 **Part 1 - Figma Presentation Slides**: [Link](https://www.figma.com/deck/ujYJVDnhoYcNNpOp0puFr2/Untitled?node-id=1-122&t=4YRroLrw8bQq4cOk-1)  
+- 📊 **Part 2 - Midjourney Presentation Slides**: [Link](https://www.figma.com/deck/J2bos4X8G71cnJPdf3oH62/250207-Midjourney-Workshop?node-id=1-313&t=0ysHuhUBksHEH6cz-1)  
+- 📖 **Tutorial Slides**: [Link](https://astonishing-cent-454.notion.site/250207-Midjourney-Workshop-1889e29f24f080a58930cbd652dd8fbf?pvs=4)  
+- 📚 **References/Sources**:  
+  - [Figma](https://www.figma.com/)  
+  - [Figma Learn](https://www.figma.com/deck/ujYJVDnhoYcNNpOp0puFr2/Untitled?node-id=1-122&t=4YRroLrw8bQq4cOk-1)  
+  - [Midjourney](https://www.midjourney.com/)  
   - [Midjourney Official Guide](https://docs.midjourney.com/docs/quick-start)
-
 
 ### How to Use This Repository
 - Each topic has a dedicated folder containing **Google Colab notebooks (`.ipynb`)** for hands-on practice.
@@ -84,12 +89,12 @@ The Institute of Psychological Science hopes this workshop will equip participan
 ### 워크샵 일정
 
 #### 1일차
-- **오전: 대형 언어 모델(LLM) - Alignment, Reasoning, Applications**  
-- **오후: 의미론적 분석 (Semantic Analysis)**  
+- **오전: 대형 언어 모델(LLM) - Alignment, Reasoning, Applications**  이윤경 선임연구원
+- **오후: 의미론적 분석 (Semantic Analysis)**  오세린 석사과정
 
 #### 2일차
-- **오전: 데이터 사이언스 - 특성 추출 (Feature Extraction)**  
-- **오후: 모바일 앱 프로토타이핑 (Figma & Midjourney 활용)**  
+- **오전: 데이터 사이언스 - 특성 추출 (Feature Extraction)**  이인주 박사과정
+- **오후: 모바일 앱 프로토타이핑 (Figma & Midjourney 활용)**  이현주, 이주혜 석사과정 
 
 ### 리포지토리 사용 방법
 - 각 주제별 폴더 안에 **Google Colab 노트북(`.ipynb`)**이 포함되어 있습니다.
@@ -97,5 +102,13 @@ The Institute of Psychological Science hopes this workshop will equip participan
 - **Google Colab**에서 노트북을 실행하여 실습해 보세요.
 
 ---
+## Acknowledgment
 
-🚀 Enjoy the workshop and happy coding!
+We thank [Prof. Jiook Cha](https://www.connectomelab.com/) and [Prof. Sowon Hahn](https://hfpsych.snu.ac.kr/People.html) for their heartwarming support!
+
+We appreciate the efforts of our volunteer teaching assistants:
+- [**Sangrok Song**](https://hfpsych.snu.ac.kr/Portfolio/portfolio_SangrokSong.html) (Masters Student, Human Factors Psychology Lab, SNU)  
+- **Sunwoo Ahn** (Undergraduate RA, Human Factors Psychology Lab, SNU)
+
+🚀 Questions:
+Yoon Kyung Lee, Ph.D. (yoonlee78@snu.ac.kr)
