@@ -2,7 +2,7 @@
 
 ### Seoul National University Institute of Psychological Science 2025 Winter Workshop
 
-#### Organizer: [Yoon Kyung Lee](yoonkyunglee.com), PhD (Senior Researcher, yoonlee78@snu.ac.kr)
+#### Organizer: [Yoon Kyung Lee](https://yoonkyunglee.com), PhD (Senior Researcher, yoonlee78@snu.ac.kr)
 
 With the rapid advancement of AI technologies, psychological research methodologies are also undergoing a transformative shift. The emergence of Large Language Models (LLMs) such as GPT-4, O1, and Gemini presents both new opportunities and challenges for psychological researchers.
 
@@ -22,7 +22,7 @@ The Institute of Psychological Science hopes this workshop will equip participan
 ### Day 1
 
 #### 1. Large Language Models (LLMs) - Alignment, Reasoning, and Applications  
-- **Presenter**: [Yoon Kyung Lee](yoonkyunglee.com), Ph.D. (Senior Researcher, Institute of Psychological Science, SNU)  
+- **Presenter**: [Yoon Kyung Lee](https://yoonkyunglee.com), Ph.D. (Senior Researcher, Institute of Psychological Science, SNU)  
 - 📁 **Folder**: `llm_alignment_reasoning_applications`  
 - 📊 **Presentation Slides**: [Link](https://www.canva.com/design/DAGd7n4z58o/pWRdUrwyN_LaxjsilH-5Qw/view?utm_content=DAGd7n4z58o&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hecefdd2b91)  
 - 📖 **Hands-on Colab Notebooks**:  
@@ -47,12 +47,13 @@ The Institute of Psychological Science hopes this workshop will equip participan
 
 ### Day 2
 
-#### 3. Data Science - Feature Extraction  
+#### 3. Data Science - Feature Selection  
 - **Presenter**: [Inju Lee](https://hfpsych.snu.ac.kr/Portfolio/portfolio_InjuLee.html), Ph.D. student at Human Factors Psychology Lab, Dept. of Psychology, SNU  
-- 📁 **Folder**: `feature_extraction`  
+- 📁 **Folder**: `feature_selection`  
 - 📊 **Presentation Slides**: [Link](https://drive.google.com/file/d/10taeTiH1I0w1nNaVjjc9gydwA4XhWdP4/view)  
 - 📚 **References/Sources**:  
-  - [Introduction to Statistical Learning with Applications in Python](www.statlearning.com)
+  - [Introduction to Statistical Learning with Applications in Python](https://www.statlearning.com)
+  - [Dataset](https://www.statlearning.com/resources-python)
 
 #### 4. Mobile App Prototyping with Figma and Midjourney  
 - **Presenters**: [Hyunjoo Lee](https://hfpsych.snu.ac.kr/Portfolio/portfolio_HyunjooLee.html), [Joohye Lee](https://hfpsych.snu.ac.kr/Portfolio/portfolio_JoohyeLee.html), Master's students at Human Factors Psychology Lab, Dept. of Psychology, SNU  
@@ -108,7 +109,7 @@ We thank [Prof. Jiook Cha](https://www.connectomelab.com/) and [Prof. Sowon Hahn
 
 We appreciate the efforts of our volunteer teaching assistants:
 - [**Sangrok Song**](https://hfpsych.snu.ac.kr/Portfolio/portfolio_SangrokSong.html) (Masters Student, Human Factors Psychology Lab, SNU)  
-- **Sunwoo Ahn** (Undergraduate RA, Human Factors Psychology Lab, SNU)
+- **Seonu An** (Undergraduate RA, Human Factors Psychology Lab, SNU)
 
 🚀 Questions:
 Yoon Kyung Lee, Ph.D. (yoonlee78@snu.ac.kr)
